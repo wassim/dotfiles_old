@@ -36,11 +36,13 @@ $HOME/.composer/vendor/bin/valet install
 mkdir $HOME/Sites
 
 # Create sites subdirectories
-mkdir $HOME/Sites/blade-ui-kit
 mkdir $HOME/Sites/laravel
+mkdir $HOME/Sites/react
+mkdir $HOME/Sites/react/gatsby
+mkdir $HOME/Sites/react/next
 
 # Clone Github repositories
-./clone.sh
+#./clone.sh
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
