@@ -3,6 +3,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'stripe/stripe-cli'
 
 # Binaries
 brew 'awscli'
@@ -15,7 +16,6 @@ brew 'git'
 brew 'gnupg'
 brew 'grep'
 brew 'httpie'
-brew 'hub'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'netlify-cli'
@@ -34,12 +34,11 @@ brew 'gifsicle'
 
 # Development
 brew 'php'
+brew 'php@8.0'
 brew 'php@7.4'
 brew 'composer'
 brew 'imagemagick'
-brew 'libmemcached'
 brew 'meilisearch'
-brew 'memcached'
 brew 'mysql'
 brew 'nginx'
 brew 'node'
@@ -49,20 +48,17 @@ brew 'yarn'
 # Apps
 cask '1password'
 cask '1password-cli'
-cask 'aerial'
-cask 'alfred'
 cask 'basecamp'
 cask 'brave-browser'
-cask 'dashlane'
 cask 'dbngin'
 cask 'discord'
 cask 'docker'
 cask 'figma'
 cask 'firefox'
 cask 'github'
-cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'gpg-suite'
+cask 'helo'
 cask 'imageoptim'
 cask 'insomnia'
 cask 'keka'
@@ -89,10 +85,10 @@ cask 'quicklook-json'
 
 # Fonts
 cask 'font-fira-code'
+cask 'font-roboto'
 
 # Mac App Store
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Spark', id: 1176895641
 mas 'Twitter', id: 1482454543
