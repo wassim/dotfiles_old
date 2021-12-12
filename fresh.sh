@@ -43,13 +43,10 @@ mkdir $HOME/Sites
 
 # Create sites subdirectories
 mkdir $HOME/Sites/laravel
-mkdir $HOME/Sites/laravel/personal
 mkdir $HOME/Sites/react
-mkdir $HOME/Sites/react/gatsby
-mkdir $HOME/Sites/react/next
 
 # Update Valet's paths
-cd $HOME/Sites/laravel/personal && valet park
+cd $HOME/Sites/laravel && valet park
 
 # Clone Github repositories
 #$DOTFILES/clone.sh
