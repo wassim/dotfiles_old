@@ -15,6 +15,7 @@ alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
 alias lara="sites && cd laravel/"
 alias react="sites && cd react/"
+alias code="cd dev/code/"
 
 # Laravel
 alias a="php artisan"
