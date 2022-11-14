@@ -17,7 +17,7 @@ alias devcode="cd $HOME/dev/code/"
 alias docker-composer="docker-compose"
 
 # Git
-alias gitit="git commit -pm '`git status -s` Edit# `git log | grep commit | wc -l`'; git push"
+alias gitit="git commit -pm 'update# `git log | grep commit | wc -l`'; git push"
 alias gst="git status"
 alias gb="git branch"
 alias gc="git checkout"
