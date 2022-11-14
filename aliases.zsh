@@ -1,13 +1,9 @@
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="source $HOME/.zshrc"
-alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
-alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
-alias compile="commit 'compile'"
-alias version="commit 'version'"
+alias o="open ."
 
 # Directories
 alias dotfiles="cd $DOTFILES"
@@ -15,35 +11,17 @@ alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
 alias lara="sites && cd laravel/"
 alias react="sites && cd react/"
-alias devcode="cd dev/code/"
-
-# Laravel
-alias a="php artisan"
-alias fresh="php artisan migrate:fresh --seed"
-alias tinker="php artisan tinker"
-alias seed="php artisan db:seed"
-alias serve="php artisan serve"
-
-# PHP
-alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias composer="php -d memory_limit=-1 /opt/homebrew/bin/composer"
-
-# JS
-alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
-alias watch="npm run watch"
+alias devcode="cd $HOME/dev/code/"
 
 # Docker
 alias docker-composer="docker-compose"
-
-# SQL Server
-alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=LaravelWow1986! -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
 
 # Git
 alias gitit="git commit -pm '`git status -s` Edit# `git log | grep commit | wc -l`'; git push"
 alias gst="git status"
 alias gb="git branch"
 alias gc="git checkout"
-alias gl="git log --oneline --decorate --color"
+alias gl=glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias amend="git add . && git commit --amend --no-edit"
 alias commit="git add . && git commit -m"
 alias diff="git diff"
@@ -57,3 +35,41 @@ alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
 alias undo="git reset --soft HEAD~1"
+
+# PhpStorm
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+
+# Laravel
+alias a="php artisan"
+alias fresh="php artisan migrate:fresh --seed"
+alias tinker="php artisan tinker"
+alias seed="php artisan db:seed"
+alias serve="php artisan serve"
+
+# PHP
+alias cfresh="rm -rf vendor/ composer.lock && composer i"
+alias co="composer"
+alias cu="composer update"
+alias cr="composer require"
+alias ci="composer install"
+alias cda="composer dump-autoload -o"
+
+alias switch-php8="brew unlink php@7.4 && brew link --overwrite --force php"
+alias switch-php74="brew unlink php && brew link --overwrite --force php@7.4"
+
+# JS
+alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+alias watch="npm run watch"
+
+# Redis
+alias flush-redis="redis-cli FLUSHALL"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com -4"
+alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Flush Directory Service cache
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+# Lock the screen
+alias afk="osascript -e 'tell application \"System Events\" to keystroke \"q\" using {command down,control down}'"
