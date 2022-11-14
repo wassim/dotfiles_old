@@ -97,3 +97,6 @@ cask 'quicklook-json'
 # Fonts
 cask 'font-fira-code'
 cask 'font-roboto'
+
+# Mas
+mas install 412759995 # Guidance
